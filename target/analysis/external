@@ -1,0 +1,4 @@
+#External Dependencies
+#Wed Mar 04 21:42:26 JST 2009
+/usr/local/scala/lib/scala-library.jar=src/main/scala/BenchmarkSuite.scala
+/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/classes.jar=src/main/scala/BenchmarkSuite.scala
