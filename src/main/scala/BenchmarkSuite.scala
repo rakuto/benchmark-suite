@@ -1,7 +1,7 @@
 /**
  * BenchmarkSuite - scalalites.org
  *
- *  Copyright (c) 2009 Rakuto Furutani (rakuto@gmail.com)
+ *  Copyright (c) 2009 Rakuto Furutani (rakuto@scalalites.org)
  *  All rights reserved.
  *
  *  Permission to use, copy, modify, and distribute this software in source
@@ -56,8 +56,8 @@ import scala.collection.mutable.{Map, HashMap, ListBuffer, Set}
  *      
  *      // Output
  *      // Benchmark of ack:
- *      //  ack(3, 4) x 10 : 4.730000 ms (avg. 0.473000 ms)
- *      //  ack(3, 2) x 1  : 0.029000 ms
+ *      //  ack(3, 4) x 10 : 4.730000 sec. (avg. 0.473000 sec.)
+ *      //  ack(3, 2) x 1  : 0.029000 sec.
  */
 object Benchmark
 {
@@ -100,10 +100,10 @@ object Benchmark
   private def format(label: String, reporter: Reporter) = {
     reporter.result.map { r => 
       var msec = String.format("%05f", (r._2(0) / 1000): java.lang.Double)
-      var detail  = "  " + r._1 + " : " + msec + " ms"
+      var detail  = "  " + r._1 + " : " + msec + " sec."
       if(r._2.length > 1)  {
         msec = String.format("%05f", (r._2(1) / 1000): java.lang.Double)
-        detail += msec.toString.mkString(" (avg. ", "", " ms)")
+        detail += msec.toString.mkString(" (avg. ", "", " sec.)")
       }
       detail
     }.mkString(label + "\n", "\n", "")
